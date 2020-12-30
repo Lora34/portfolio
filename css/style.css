@@ -1,0 +1,87 @@
+/* sen-regular - latin */
+@font-face {
+  font-family: 'Sen';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/sen-v2-latin-regular.woff2") format("woff2"), url("../fonts/sen-v2-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* sen-700 - latin */
+@font-face {
+  font-family: 'Sen';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/sen-v2-latin-700.woff2") format("woff2"), url("../fonts/sen-v2-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #FFF;
+  background-color: #000;
+}
+
+.wrapper {
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+/** .head__bg
+    margin-left: 20%
+    position: absolute
+    width: 80%
+    height: 900px
+    z-index: -10
+    background-color: #181823 **/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header__item {
+  margin-right: 40px;
+}
+
+.header__link {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.header__link:hover, .header__link:focus, .header__link:active {
+  opacity: 0.75;
+}
+/*# sourceMappingURL=style.css.map */
