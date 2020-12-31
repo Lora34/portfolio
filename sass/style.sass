@@ -28,10 +28,11 @@ body
     height: 900px
     z-index: -10
     background-color: #181823 **/
-    
+
 .header 
     position: fixed
-    top: 0
+    top: 32px
+    //bottom: 32px
     left: 0
     width: 100%
 
@@ -40,6 +41,7 @@ body
         flex-wrap: wrap
         align-items: center
         justify-content: space-between
+        bottom: 30px
 
     &__list 
         display: flex
@@ -55,4 +57,95 @@ body
         
     &__link:hover, &__link:focus, &__link:active  ///ВАЖНО
         opacity: 0.75
+
 //</Header>=======================================================================
+
+//<Intro>=======================================================================
+.intro 
+    position: relative
+    
+
+    &__wrapper
+        margin-top: 168px
+        
+    &__img
+        position: absolute
+        width: 50%
+        height: 650px
+        background: url('../img/intro.jpg') no-repeat center
+        background-size: cover
+        z-index: -1
+        //margin-top: 
+        
+    &__text
+        margin-left: 662px
+        padding-top: 141px
+        //margin: 221px 40px 32px 662px      
+
+    &__title 
+        //font-weight: 700
+        font-size: 50px
+        line-height: 94px
+        
+    &__subtitle
+        //font-weight: normal
+        font-size: 18px
+        line-height: 150%
+
+//</Intro>=======================================================================
+
+//<Companies>=======================================================================
+
+.companies 
+    padding-top: 120px
+    bottom: 144px
+
+    &__desc 
+        
+
+    &__title  
+        font-family: Sen
+        font-style: normal
+        font-weight: bold
+        font-size: 55px
+        line-height: 66px
+        display: flex
+        align-items: center
+
+    &__cards
+
+.cards
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+//</Companies>=======================================================================
+
+//<Philosophy>=======================================================================
+.philosophy 
+    min-height: 600px
+
+    &__desc
+        margin-top:  
+
+    &__title 
+
+    &__subtitle 
+    
+    &__img 
+
+//</Philosophy>=======================================================================
+
+//<Skillset>=======================================================================
+.skillset__group
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.skillset__cards
+    margin-bottom: 120px
+    
+//</Skillset>=======================================================================
+
+	
+

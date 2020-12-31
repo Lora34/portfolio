@@ -44,7 +44,7 @@ body {
     background-color: #181823 **/
 .header {
   position: fixed;
-  top: 0;
+  top: 32px;
   left: 0;
   width: 100%;
 }
@@ -61,6 +61,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  bottom: 30px;
 }
 
 .header__list {
@@ -83,5 +84,88 @@ body {
 
 .header__link:hover, .header__link:focus, .header__link:active {
   opacity: 0.75;
+}
+
+.intro {
+  position: relative;
+}
+
+.intro__wrapper {
+  margin-top: 168px;
+}
+
+.intro__img {
+  position: absolute;
+  width: 50%;
+  height: 650px;
+  background: url("../img/intro.jpg") no-repeat center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.intro__text {
+  margin-left: 662px;
+  padding-top: 141px;
+}
+
+.intro__title {
+  font-size: 50px;
+  line-height: 94px;
+}
+
+.intro__subtitle {
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.companies {
+  padding-top: 120px;
+  bottom: 144px;
+}
+
+.companies__title {
+  font-family: Sen;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 66px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.philosophy {
+  min-height: 600px;
+}
+
+.skillset__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skillset__cards {
+  margin-bottom: 120px;
 }
 /*# sourceMappingURL=style.css.map */
