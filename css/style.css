@@ -21,6 +21,10 @@
           box-sizing: inherit;
 }
 
+li {
+  list-style-type: none;
+}
+
 body {
   font-family: 'Sen', sans-serif;
   font-weight: 400;
@@ -44,9 +48,11 @@ body {
     background-color: #181823 **/
 .header {
   position: fixed;
-  top: 32px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 32px 32px;
   left: 0;
   width: 100%;
+  z-index: 100;
 }
 
 .header__wrapper {
@@ -88,24 +94,26 @@ body {
 
 .intro {
   position: relative;
-}
-
-.intro__wrapper {
-  margin-top: 168px;
+  height: 90vh;
+  padding-top: 80px;
+  padding-right: 40px;
 }
 
 .intro__img {
   position: absolute;
-  width: 50%;
-  height: 650px;
+  width: 50vw;
+  height: 80vh;
   background: url("../img/intro.jpg") no-repeat center;
   background-size: cover;
   z-index: -1;
+  margin-top: 80px;
 }
 
 .intro__text {
   margin-left: 662px;
   padding-top: 141px;
+  min-width: 662px;
+  margin-right: 40px;
 }
 
 .intro__title {
@@ -118,26 +126,25 @@ body {
   line-height: 150%;
 }
 
-.companies {
-  padding-top: 120px;
-  bottom: 144px;
+.experience {
+  padding: 120px 120px;
 }
 
-.companies__title {
-  font-family: Sen;
-  font-style: normal;
-  font-weight: bold;
+.experience__desc {
+  text-transform: uppercase;
+  color: #8491A0;
+  margin-bottom: 8px;
+}
+
+.experience__title {
+  font-family: 'Sen', sans-serif;
+  font-weight: 700;
   font-size: 55px;
   line-height: 66px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-bottom: 40px;
 }
 
-.cards {
+.experience__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,13 +154,154 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.experience__item {
+  min-width: 416px;
+}
+
+.experience__number {
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  font-size: 117px;
+  line-height: 141px;
+  color: #8491A0;
+}
+
+.experience__title {
+  font-family: 'Sen', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.experience__title-first {
+  color: #3CC74E;
+}
+
+.experience__title-second {
+  color: #609BFF;
+}
+
+.experience__title-third {
+  color: #E95D90;
+}
+
+.experience__subtitle {
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #8491A0;
 }
 
 .philosophy {
-  min-height: 600px;
+  background-color: #FFF3E4;
+  position: relative;
+  height: 600px;
+}
+
+.philosophy__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (3fr)[2];
+      grid-template-columns: repeat(2, 3fr);
+}
+
+.philosophy__desc-title {
+  font-family: 'Sen', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 66px;
+  color: #181823;
+  padding-top: 120px;
+  margin-bottom: 24px;
+}
+
+.philosophy__desc-subtitle {
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  margin-bottom: 134px;
+  color: #5B6876;
+}
+
+.philosophy__desc-about {
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  margin-bottom: 120px;
+  color: #181823;
+  text-decoration: none;
+}
+
+.philosophy__img {
+  position: absolute;
+  width: 50%;
+  height: 600px;
+  background: url("../img/philosophy.jpg") no-repeat center;
+  background-size: cover;
+  right: 0;
+}
+
+.skillset {
+  padding: 120px 0;
 }
 
 .skillset__group {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+}
+
+.skillset__desc {
+  min-width: 416px;
+}
+
+.skillset__title {
+  font-family: 'Sen', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 66px;
+  margin-bottom: 24px;
+}
+
+.skillset__cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 48px 24px;
+}
+
+.skillset__card {
+  max-width: 416px;
+}
+
+.skillset__card-img {
+  margin-bottom: 24px;
+}
+
+.skillset__card-title {
+  margin-bottom: 12px;
+}
+
+.skillset .subtitle {
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #8491A0;
+}
+
+.label__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -165,7 +313,57 @@ body {
           align-items: center;
 }
 
-.skillset__cards {
-  margin-bottom: 120px;
+.label__item {
+  padding: 59px 120px;
+}
+
+.projects {
+  padding: 120px 0;
+}
+
+.projects__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.projects__subtitle {
+  font-family: 'Sen', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  color: #8491A0;
+  margin-bottom: 8px;
+}
+
+.projects__title {
+  font-family: 'Sen', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 66px;
+  margin-bottom: 80px;
+}
+
+.projects__card-title {
+  font-family: 'Sen', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.projects__card-subtitle {
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #8491A0;
 }
 /*# sourceMappingURL=style.css.map */

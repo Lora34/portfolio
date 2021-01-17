@@ -1,11 +1,16 @@
 @import 'fonts'
 
+$graycolor: #8491A0
+
 //<Основные параметры>================================================================
     html
     box-sizing: border-box
 
 *, *::before, *::after
     box-sizing: inherit
+
+li
+    list-style-type: none
 
 body
     +regular
@@ -31,10 +36,12 @@ body
 
 .header 
     position: fixed
-    top: 32px
-    //bottom: 32px
+    background-color: rgba(0, 0, 0, 0.5)
+    padding: 32px 32px
     left: 0
     width: 100%
+    z-index: 100
+    
 
     &__wrapper 
         display: flex
@@ -63,32 +70,31 @@ body
 //<Intro>=======================================================================
 .intro 
     position: relative
-    
+    height: 90vh
+    padding-top: 80px
+    padding-right: 40px
+    //margin-bottom: 120px
 
-    &__wrapper
-        margin-top: 168px
-        
     &__img
         position: absolute
-        width: 50%
-        height: 650px
+        width: 50vw
+        height: 80vh
         background: url('../img/intro.jpg') no-repeat center
         background-size: cover
         z-index: -1
-        //margin-top: 
+        margin-top: 80px 
         
     &__text
         margin-left: 662px
-        padding-top: 141px
-        //margin: 221px 40px 32px 662px      
+        padding-top: 141px  
+        min-width: 662px 
+        margin-right: 40px
 
     &__title 
-        //font-weight: 700
         font-size: 50px
         line-height: 94px
         
     &__subtitle
-        //font-weight: normal
         font-size: 18px
         line-height: 150%
 
@@ -96,56 +102,191 @@ body
 
 //<Companies>=======================================================================
 
-.companies 
-    padding-top: 120px
-    bottom: 144px
+.experience
+    padding: 120px 120px
 
     &__desc 
-        
+        text-transform: uppercase
+        color: $graycolor
+        margin-bottom: 8px
 
     &__title  
-        font-family: Sen
-        font-style: normal
-        font-weight: bold
+        +bold
         font-size: 55px
         line-height: 66px
+        margin-bottom: 40px
+
+    &__list
         display: flex
+        justify-content: space-between
         align-items: center
 
-    &__cards
+    &__item
+        min-width: 416px
 
-.cards
-    display: flex
-    justify-content: space-between
-    align-items: center
+    &__number
+        +regular
+        font-size: 117px
+        line-height: 141px
+        color: $graycolor
+
+    &__title
+        +bold
+        font-size: 24px
+        line-height: 150%
+
+        &-first
+            color: #3CC74E
+        
+        &-second
+            color: #609BFF
+        
+        &-third
+            color: #E95D90
+
+    &__subtitle
+        +regular
+        font-size: 16px
+        line-height: 150%
+        color: $graycolor
 
 //</Companies>=======================================================================
 
 //<Philosophy>=======================================================================
 .philosophy 
-    min-height: 600px
+    background-color: #FFF3E4
+    position: relative
+    height: 600px
+
+    &__wrapper 
+        display: grid
+        grid-template-columns: repeat(2, 3fr)
+        //flex-wrap: wrap
+        //align-items: center
+        //justify-content: space-between
 
     &__desc
-        margin-top:  
 
-    &__title 
+        &-title
+            +bold
+            font-size: 55px
+            line-height: 66px
+            color: #181823
+            padding-top: 120px
+            margin-bottom: 24px
 
-    &__subtitle 
+        &-subtitle 
+            +regular
+            font-size: 18px
+            line-height: 150%
+            margin-bottom: 134px
+            color: #5B6876
+
+        &-about
+            +regular
+            font-size: 16px
+            line-height: 150%
+            text-transform: uppercase
+            margin-bottom: 120px
+            color: #181823
+            text-decoration: none
     
     &__img 
-
+        position: absolute
+        width: 50%
+        height: 600px
+        background: url('../img/philosophy.jpg') no-repeat center
+        background-size: cover
+        right: 0
 //</Philosophy>=======================================================================
 
 //<Skillset>=======================================================================
-.skillset__group
-    display: flex
-    justify-content: space-between
-    align-items: center
+.skillset
+    padding: 120px 0
 
-.skillset__cards
-    margin-bottom: 120px
+    &__group
+        display: grid
+        grid-template-columns: 1fr 2fr
+        align-items: normal
+
+    &__desc
+        min-width: 416px
+
+    &__title
+        +bold
+        font-size: 55px
+        line-height: 66px
+        margin-bottom: 24px
+
+    &__cards
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 48px 24px
+
+    &__card
+        max-width: 416px
+
+        &-img
+            margin-bottom: 24px
+
+        &-title
+            margin-bottom: 12px
+    
+    .subtitle
+        +regular
+        font-size: 18px
+        line-height: 150%
+        color: $graycolor
     
 //</Skillset>=======================================================================
 
-	
+//<Label>=======================================================================
+.label
+    
+    &__items
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__item
+        padding: 59px 120px
+//</Label>=======================================================================
+
+//<Projects>=======================================================================	
+.projects
+    padding: 120px 0 
+
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+
+    &__subtitle
+        +bold
+        font-size: 16px
+        line-height: 150%
+        display: flex
+        align-items: center
+        text-transform: uppercase
+        color: $graycolor
+        margin-bottom: 8px
+
+    &__title
+        +bold
+        font-size: 55px
+        line-height: 66px
+        margin-bottom: 80px
+
+    &__card
+
+        &-title
+            +bold
+            font-size: 24px
+            line-height: 150%
+
+        &-subtitle
+            +regular
+            font-size: 18px
+            line-height: 150%
+            color: $graycolor
+//</Projects>=======================================================================    
 
